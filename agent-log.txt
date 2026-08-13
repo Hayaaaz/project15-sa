@@ -1,0 +1,7 @@
+AI Assistance Statement — Week 15 Lab
+
+During this lab, I used Copilot as a support tool to improve clarity, structure, and organization in my written explanations. Copilot helped me rephrase technical reasoning, verify that my tier justifications aligned with §15.2, and ensure my reflections were professionally formatted. All MCP commands, tool runs, YAML edits, and terminal outputs were executed and verified by me directly. I made every judgment call myself, including tier placement, approval‑gate behavior, and the post‑incident account.
+
+Copilot did not author any decisions, classifications, or policy statements. It did not generate remediation steps, modify code, or determine autonomy tiers. Where Copilot provided phrasing or structural suggestions, I reviewed them, corrected them when necessary, and ensured they accurately reflected my own understanding of the system. All final content represents my own reasoning and accountable judgment, consistent with the course’s requirement to distinguish between AI‑assisted and AI‑authored work.
+
+This log reflects how I used AI as a professional tool to support my thinking, not replace it, and documents where I remained the human responsible for every technical and governance decision in the Week 15 gated self‑healing loop.
