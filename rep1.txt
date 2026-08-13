@@ -1,0 +1,8 @@
+The MCP spec requires the agent host to obtain explicit human consent before invoking any tool, which is why the consent prompt appeared when get_disk_usage was triggered. The spec also treats tool descriptions from untrusted servers as untrusted input to prevent a malicious or misconfigured server from tricking the agent into unsafe actions.
+
+What I did: My VM could not install MCP 2.x, so the official client API wasn’t available. I rewrote the professor’s FastMCP server to speak JSON‑RPC over STDIO and added the consent prompt manually, then built a custom Python client to send MCP‑style requests. This let me trigger get_disk_usage locally and complete Rep 1 exactly as required.
+
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.
+

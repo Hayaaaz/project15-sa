@@ -1,0 +1,4 @@
+Logs are untrusted content because an attacker can plant instructions inside filenames, paths, or error messages, and a model may misinterpret them as commands. Once an agent can both read logs and run tools, any unfiltered telemetry becomes a potential prompt-injection vector, so treating all logs as untrusted input (LLM01) is a non-negotiable rule.
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

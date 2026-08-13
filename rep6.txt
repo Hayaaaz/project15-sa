@@ -1,0 +1,4 @@
+The single configuration difference was that node‑7 correctly marked the storage‑resize step as approve, while node‑4 incorrectly marked the same step as act. The diagnosis was correct on both nodes, but node‑4’s mis‑tiered autonomy caused the agent to auto‑resize the PVC, turning a safe remediation into an expensive one.
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

@@ -1,0 +1,15 @@
+A. kubectl rollout restart deploy/api → APPROVE → Reversible but high blast radius because it restarts production pods.
+
+B. journalctl --vacuum-size=500M → APPROVE → Deletes logs permanently; irreversible but low blast radius.
+
+C. du -x -d1 /var | sort -rh → DETECT → Purely read-only; fully reversible and zero blast radius.
+
+D. resize-pvc data-var --to 500Gi → APPROVE → Storage mutations have high blast radius and are not easily reversible.
+
+E. systemctl stop nginx → APPROVE → Immediately disrupts service availability; reversible but very high blast radius.
+
+F. apt-get clean → ACT → Safe, reversible, and low blast radius; only removes cached packages.
+The HUMAN_APPROVAL_TOKEN value that flips the block to an allow is "ALLOW", and this token mechanism is safer than removing the destructive pattern because it forces explicit human approval instead of silently trusting pattern matching.
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

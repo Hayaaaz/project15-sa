@@ -1,0 +1,4 @@
+VERIFY checks node_filesystem_avail_bytes because the only meaningful question is whether the underlying problem actually improved, not whether the remediation command exited with code 0. An exit-code check would miss failure modes like journalctl returning 0 even when it deleted no logs, leaving the filesystem still critically full. Only re-checking the real signal guarantees the remediation actually worked.
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

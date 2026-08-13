@@ -1,0 +1,14 @@
+Autonomy Policy for the Classroom Attendance API Service  
+(August 2026)
+
+This policy governs autonomous actions taken on the Classroom Attendance API, a service I operate and am accountable for. The autonomy ladder for this service is: Detect (read-only metrics such as API latency, error rate, and request volume), Suggest (propose configuration changes such as increasing worker threads or rotating logs), and Approve (execute storage-modifying or cost-bearing actions such as resizing the backing PostgreSQL volume or enabling premium autoscaling). No action-tier step exists for this service.
+
+The following actions are gated: database volume resizing, enabling paid autoscaling tiers, and modifying retention policies. These require explicit approval from the on-call administrator or the service owner. Suggestions may be generated autonomously, but no approve-tier action may execute without human confirmation.
+
+This service follows a strict Rule-of-Two: the agent may only use two tools — metrics.get() and storage.resize() — and storage.resize() always requires human approval. The agent may never combine tools in a way that produces irreversible or cost-bearing changes without human oversight.
+
+All autonomous activity is logged through a dedicated audit pipeline: every detect, suggest, approve, and verify step is written to /var/log/attendance-api-autonomy.log with timestamps, parameters, and outcomes. Logs are retained for 180 days.
+
+A consumption cap is enforced: no autonomous remediation may exceed $25/month in additional cloud cost. Any action projected to exceed this cap is automatically blocked and escalated.
+
+This policy aligns with EU AI Act Article 14 (human oversight), acknowledging that enforcement timelines remain in flux as of 2026

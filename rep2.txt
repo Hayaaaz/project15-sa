@@ -1,0 +1,5 @@
+The agent can read the file://incident-log Resource because MCP allows read‑only access to server‑exposed data, but it cannot modify anything since the server intentionally provides no write path. The design principle here is least privilege: the agent is only given the minimum capabilities required, preventing accidental or malicious changes to the host system.
+
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

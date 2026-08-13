@@ -1,0 +1,3 @@
+All of the autonomy tiers in the runbook are correct. Every approve action involves either irreversible deletion (journalctl vacuum), service disruption or cost (resize-pvc), so they require explicit human approval. For each action, I asked the two §15.2 questions: “How reversible is this?” and “What is the blast radius if it goes wrong?” Any step with high blast radius or low reversibility must be approve, while safe and reversible maintenance like apt-get clean can remain act.
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

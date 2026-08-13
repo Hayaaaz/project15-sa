@@ -1,0 +1,11 @@
+Lethal-trifecta leg        OWASP LLM (2025) ID              One ops mitigation
+Untrusted content          LLM01 Prompt Injection           Treat all telemetry/logs as untrusted input
+Private-data access        LLM02 Sensitive Info Disclosure  Scope the agent’s reads (least privilege)
+Exfiltration vector        LLM06 Excessive Agency           Remove the outbound tool, or gate it
+
+For an SRE agent, the cheapest leg to remove is the exfiltration vector. The agent can still read untrusted content and even private data, but if you simply remove or gate outbound tools, it has no way to leak anything. Blocking exfiltration breaks the trifecta with the smallest operational cost.
+
+
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and decisions myself.

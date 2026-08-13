@@ -1,0 +1,4 @@
+This is an architectural fix because removing the outbound tool eliminates the exfiltration leg entirely, regardless of how clever the injected instruction is. A prompt filter would not stop this attack, because the malicious instruction is hidden inside an untrusted document and arrives through an indirect channel the filter cannot reliably sanitize. Filters only inspect text; they cannot prevent a compromised agent from using a powerful outbound capability once it exists. By removing or gating the outbound tool, the agent has no channel to leak the secret, so the trifecta collapses even though the injection still fires.
+
+
+AI usage: I used Copilot to help structure explanations, but I verified all commands, outputs, and de>
